@@ -1,6 +1,7 @@
 body{
   font-family: 'Exo', sans-serif;
   background: #80ccff;
+  background: -webkit-linear-gradient(to left, #80ccff, #80ccff);
 }
 
 .circles{
