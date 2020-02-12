@@ -123,7 +123,7 @@ class ComponetUserNotas extends Component {
                             <input type="text" className="form-control mb-2" id="autor" placeholder="Autor do Livro" readOnly />
                         </div>
                         <div className="col-auto">
-                            <input type="number" min="1" max="5" onChange={e => this.nota = e.target.value} className="form-control mb-2" id="nota" placeholder="Avaliar livro" />
+                            <input type="number" max="5" onChange={e => this.nota = e.target.value} className="form-control mb-2" id="nota" placeholder="Avaliar livro" />
                         </div>
                         <div className="col-auto">
                             <button type="submit" className="btn btn-primary mb-2" onClick={this.saveRating}>Salvar</button>
