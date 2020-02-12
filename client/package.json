@@ -14,7 +14,7 @@
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.0"
   },
-  "proxy": "http://e07a6b80.ngrok.io",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
