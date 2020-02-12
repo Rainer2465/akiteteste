@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 require("dotenv").config();
 const app = express();
 require('dotenv').config();
+const path = require('path');
 //require('./services/passport.js');
 
 const env = process.env.NODE_ENV || 'development';
@@ -31,5 +32,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 require('./app/controller/authController')(app);
 require('./app/controller/projectController')(app);
+
+if (process.env.NODE_ENV === 'production'){
+   app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(_dirname, 'client', 'build', 'index.html'));
+    });
+}
+
 
 app.listen(process.env.PORT || 5000); 
